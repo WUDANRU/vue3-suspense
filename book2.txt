@@ -1,0 +1,14 @@
+Suspense异步组件,它的使用场景，子级与孙级页面都有loading,让子级孙级都在父级页面显示loading
+封装通用ErrorCapture组件
+
+//先加载#fallback的内容，promise的resolve后再加载的#default内容
+<Suspense>
+ <template #default>
+    <!-- 异步组件，当setup方法中的异步方法执行完成后显示 -->
+ </template>
+ <template #fallback>
+    <!-- 默认加载的内容，比如loading提示或者图标 -->
+ </template>
+</Suspense>
+
+路由切换，封装可以显示每个路由的loading，封装了components/SuspenseWithError.vue

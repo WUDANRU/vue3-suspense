@@ -1,0 +1,46 @@
+vue create .     //点号代表当前目录下创建
+
+Vue CLI v4.5.15
+? Generate project in current directory? Yes
+
+Vue CLI v4.5.15
+? Please pick a preset: Default (Vue 3) ([Vue 3] babel, eslint)
+
+vue add typescript //安装typescript
+
+ WARN  There are uncommitted changes in the current repository, it's recommended to commit or stash them first.
+? Still proceed? Yes
+
+📦  Installing @vue/cli-plugin-typescript...
+
+ ERROR  Failed to get response from https://registry.npmjs.org/vue-cli-version-marker
++ @vue/cli-plugin-typescript@4.5.15
+added 50 packages from 43 contributors and audited 1391 packages in 18.815s
+
+95 packages are looking for funding
+  run `npm fund` for details
+
+found 21 vulnerabilities (2 low, 15 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+✔  Successfully installed plugin: @vue/cli-plugin-typescript
+
+? Use class-style component syntax? No
+? Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+? Convert all .js files to .ts? Yes
+? Allow .js files to be compiled? No
+? Skip type checking of all declaration files (recommended for apps)? Yes
+
+🚀  Invoking generator for @vue/cli-plugin-typescript...
+📦  Installing additional dependencies...
+
+added 43 packages from 32 contributors and audited 1434 packages in 12.277s
+
+107 packages are looking for funding
+  run `npm fund` for details
+
+found 21 vulnerabilities (2 low, 15 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+⚓  Running completion hooks...
+
+✔  Successfully invoked generator for plugin: @vue/cli-plugin-typescript
+

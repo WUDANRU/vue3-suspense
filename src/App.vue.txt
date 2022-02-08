@@ -1,0 +1,50 @@
+<template>
+<div>
+  <div v-if="error"> <!-- 异步组件加载还加载失败的话 -->
+     {{error}}
+  </div>
+  <Suspense v-else>
+   <template #default>
+      <User />
+   </template>
+    <template #fallback>
+      loadding
+    </template>
+  </Suspense>
+</div>
+</template>
+
+<script lang="ts">
+import { defineComponent, onErrorCaptured, ref } from "vue";
+import User from '@/components/User.vue';
+
+export default defineComponent({
+  name: 'App',
+   components: {
+    User
+  },
+  setup(){
+    const error=ref('')
+    //捕获错误并且重新赋值
+    onErrorCaptured((err)=>{ //onErrorCaptured：对error修改的生命周期，异步组件加载失败/错误
+      console.log('setup=>err',err)
+     error.value=err as unknown as string //课程是这样写的，error.value=err as string,因为error.value报错了，所以转成字符串
+      return true
+    })
+    return{
+      error
+    }
+  }
+});
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
